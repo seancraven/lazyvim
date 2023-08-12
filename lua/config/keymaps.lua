@@ -32,3 +32,10 @@ end, { desc = "Find Keymaps" })
 
 vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen Mode" })
 vim.keymap.set("n", "<leader>cw", require("wrapping").soft_wrap_mode, { desc = "Soft Wrap" })
+
+vim.keymap.set("n", "<leader>ma", require("harpoon.mark").add_file, { desc = "Add to Harpoon" })
+vim.keymap.set("n", "<leader>mt", require("harpoon.ui").toggle_quick_menu, { desc = "Harpoon Terminal" })
+vim.keymap.set("n", "<leader>mj", function() require("harpoon.ui").nav_file(1) end, { desc = "Harpoon Terminal" })
+vim.keymap.set("n", "<leader>mh", function() require("harpoon.ui").nav_file(2) end, { desc = "Harpoon Terminal" })
+vim.keymap.set("n", "<leader>mk", function() require("harpoon.ui").nav_file(3) end, { desc = "Harpoon Terminal" })
+vim.keymap.set("n", "<leader>ml", function() require("harpoon.ui").nav_file(4) end, { desc = "Harpoon Terminal" })

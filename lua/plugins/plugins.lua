@@ -87,4 +87,5 @@ return {
       })
     end,
   },
+  { "ThePrimeagen/harpoon" },
 }
