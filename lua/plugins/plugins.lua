@@ -71,7 +71,7 @@ return {
     end,
   },
   { "numToStr/Comment.nvim" },
-  { "folke/zen-mode.nvim" },
+  { "folke/zen-mode.nvim", },
   {
     "zbirenbaum/copilot.lua",
     config = function()
@@ -88,4 +88,8 @@ return {
     end,
   },
   { "ThePrimeagen/harpoon" },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function() require("gitsigns").setup() end,
+  },
 }
