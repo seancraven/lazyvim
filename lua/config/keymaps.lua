@@ -30,7 +30,7 @@ vim.keymap.set("n", "<leader>fk", function()
   require("telescope.builtin").keymaps()
 end, { desc = "Find Keymaps" })
 
-vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen Mode" })
+-- vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen Mode" })
 vim.keymap.set("n", "<leader>cw", require("wrapping").soft_wrap_mode, { desc = "Soft Wrap" })
 
 vim.keymap.set("n", "<leader>ma", require("harpoon.mark").add_file, { desc = "Add to Harpoon" })

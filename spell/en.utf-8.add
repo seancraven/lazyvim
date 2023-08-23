@@ -8,3 +8,5 @@ PPO
 MLP
 MDP
 Symmetrizer
+hyperparameters
+PureJaxRL
