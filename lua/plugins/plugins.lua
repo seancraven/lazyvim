@@ -67,30 +67,30 @@ return {
     end,
   },
   { "numToStr/Comment.nvim" },
-  {
-    "shortcuts/no-neck-pain.nvim",
-    version = "*",
-    config = function()
-      require("no-neck-pain").setup(
-        {
-          width = 120,
-          buffers = {
-            right = {
-              enabled = true,
-            },
-            left = {
-              enabled = true,
-            }
-          },
-          autocmds = {
-            enableOnVimEnter = true,
-            enableOnTabEnter = true,
-          }
-        }
-      )
-    end,
-
-  },
+  -- {
+  --   "shortcuts/no-neck-pain.nvim",
+  --   version = "*",
+  --   config = function()
+  --     require("no-neck-pain").setup(
+  --       {
+  --         width = 120,
+  --         buffers = {
+  --           right = {
+  --             enabled = true,
+  --           },
+  --           left = {
+  --             enabled = true,
+  --           }
+  --         },
+  --         autocmds = {
+  --           enableOnVimEnter = true,
+  --           enableOnTabEnter = true,
+  --         }
+  --       }
+  --     )
+  --   end,
+  --
+  -- },
 
   {
     "zbirenbaum/copilot.lua",
