@@ -39,3 +39,4 @@ vim.keymap.set("n", "<leader>mj", function() require("harpoon.ui").nav_file(1) e
 vim.keymap.set("n", "<leader>mh", function() require("harpoon.ui").nav_file(2) end, { desc = "Harpoon Terminal" })
 vim.keymap.set("n", "<leader>mk", function() require("harpoon.ui").nav_file(3) end, { desc = "Harpoon Terminal" })
 vim.keymap.set("n", "<leader>ml", function() require("harpoon.ui").nav_file(4) end, { desc = "Harpoon Terminal" })
+vim.keymap.set("n", "<leader>cc", function() require("neogen").generate() end, { desc = "Generate docs template" })

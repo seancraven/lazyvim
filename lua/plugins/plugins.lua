@@ -112,4 +112,20 @@ return {
     "lewis6991/gitsigns.nvim",
     config = function() require("gitsigns").setup() end,
   },
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("neogen").setup {
+        -- Uncomment next line if you want to follow only stable versions
+        version = "*",
+        languages = {
+          python = {
+            template = {
+              annotation_convention = "reST"
+            }
+          }
+        } }
+    end,
+  },
 }
