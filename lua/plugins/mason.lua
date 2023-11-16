@@ -4,10 +4,8 @@ return {
     opts = {
       ensure_installed = {
         "black",
-        "ruff",
         "pyright",
       },
     },
   },
-
 }

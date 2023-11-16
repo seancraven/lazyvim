@@ -110,22 +110,34 @@ return {
   { "ThePrimeagen/harpoon" },
   {
     "lewis6991/gitsigns.nvim",
-    config = function() require("gitsigns").setup() end,
+    config = function()
+      require("gitsigns").setup()
+    end,
   },
   {
     "danymat/neogen",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
-      require("neogen").setup {
+      require("neogen").setup({
         -- Uncomment next line if you want to follow only stable versions
         version = "*",
         languages = {
           python = {
             template = {
-              annotation_convention = "reST"
-            }
-          }
-        } }
+              annotation_convention = "reST",
+            },
+          },
+        },
+      })
     end,
+  },
+  -- Lua
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      twilight = { enabled = false }, -- enable to start Twilight when zen mode opens
+      gitsigns = { enabled = true }, -- disables git signs
+      tmux = { enabled = false }, -- disables the tmux statusline
+    },
   },
 }
