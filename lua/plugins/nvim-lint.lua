@@ -6,7 +6,6 @@ return {
     events = { "BufWritePost", "BufReadPost", "InsertLeave" },
     linters_by_ft = {
       fish = { "fish" },
-      python = { "ruff" },
     },
     -- LazyVim extension to easily override linter options
     -- or add custom linters.
