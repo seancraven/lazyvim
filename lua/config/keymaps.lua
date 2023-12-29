@@ -9,6 +9,10 @@ vim.keymap.set("n", "<C-Up>", require("smart-splits").resize_up, { desc = "Move 
 vim.keymap.set("n", "<C-Down>", require("smart-splits").resize_down, { desc = "Move to left split" })
 vim.keymap.set("n", "<C-Left>", require("smart-splits").resize_left, { desc = "Move to left split" })
 vim.keymap.set("n", "<C-Right>", require("smart-splits").resize_right, { desc = "Move to left split" })
+vim.keymap.set("n", "<leader>e", function()
+  require("zen-mode").toggle()
+  vim.cmd("Neotree toggle")
+end, { desc = "Toggle Neotree" })
 
 vim.keymap.set("n", "<leader>/", function()
   require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
@@ -30,7 +34,6 @@ vim.keymap.set("n", "<leader>fk", function()
   require("telescope.builtin").keymaps()
 end, { desc = "Find Keymaps" })
 
--- vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen Mode" })
 vim.keymap.set("n", "<leader>cw", require("wrapping").soft_wrap_mode, { desc = "Soft Wrap" })
 vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen mode toggle" })
 
