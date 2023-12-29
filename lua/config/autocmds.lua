@@ -8,10 +8,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.py", "rs", "sql", "md", "*.lua" },
+  pattern = { "*.py", "*.rs", "*.sql", "*.md", "*.lua" },
   callback = require("zen-mode").open,
 })
 vim.api.nvim_create_autocmd({ "BufLeave" }, {
-  pattern = { "*.py", "rs", "sql", "md", "*.lua" },
+  pattern = { "*.py", "*.rs", "*.sql", "*.md", "*.lua" },
   callback = require("zen-mode").close,
 })
