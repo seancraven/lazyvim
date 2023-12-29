@@ -9,6 +9,15 @@ vim.keymap.set("n", "<C-Up>", require("smart-splits").resize_up, { desc = "Move 
 vim.keymap.set("n", "<C-Down>", require("smart-splits").resize_down, { desc = "Move to left split" })
 vim.keymap.set("n", "<C-Left>", require("smart-splits").resize_left, { desc = "Move to left split" })
 vim.keymap.set("n", "<C-Right>", require("smart-splits").resize_right, { desc = "Move to left split" })
+-- Supa Paste
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Super Yank" })
+vim.keymap.set("n", "<leader>d", '"+d', { desc = "Super delete" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Super paste" })
+
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Super yank" })
+vim.keymap.set("v", "<leader>d", '"+d', { desc = "Super delete" })
+vim.keymap.set("v", "<leader>p", '"+p', { desc = "Super paste" })
+
 vim.keymap.set("n", "<leader>e", function()
   require("zen-mode").toggle()
   vim.cmd("Neotree toggle")
