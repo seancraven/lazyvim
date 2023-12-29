@@ -6,11 +6,15 @@ return {
       return {}
     end,
   },
-
+  {
+    "tpope/vim-dadbod",
+    opt = true,
+  },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-nvim-lsp",
     },
 
     ---@param opts cmp.ConfigSchema
@@ -23,6 +27,11 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
+
+      -- opts.sources(vim.list_extend(opts.sources({ { name = "vim-dadbod-completion" } })))
+      cmp.setup.filetype("sql", {
+        sources = cmp.config.sources({ { name = "nvim_lsp" } }, { { name = "luasnip" } }),
+      })
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
@@ -67,31 +76,6 @@ return {
     end,
   },
   { "numToStr/Comment.nvim" },
-  -- {
-  --   "shortcuts/no-neck-pain.nvim",
-  --   version = "*",
-  --   config = function()
-  --     require("no-neck-pain").setup(
-  --       {
-  --         width = 120,
-  --         buffers = {
-  --           right = {
-  --             enabled = true,
-  --           },
-  --           left = {
-  --             enabled = true,
-  --           }
-  --         },
-  --         autocmds = {
-  --           enableOnVimEnter = true,
-  --           enableOnTabEnter = true,
-  --         }
-  --       }
-  --     )
-  --   end,
-  --
-  -- },
-
   {
     "zbirenbaum/copilot.lua",
     config = function()
