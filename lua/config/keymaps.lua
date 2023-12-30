@@ -30,7 +30,6 @@ vim.keymap.set(
   { desc = "Toggle comment for selection" }
 )
 -- Search
---
 vim.keymap.set("n", "<leader>fw", function()
   require("telescope.builtin").live_grep()
 end, { desc = "Find words" })
@@ -38,9 +37,11 @@ vim.keymap.set("n", "<leader>fk", function()
   require("telescope.builtin").keymaps()
 end, { desc = "Find Keymaps" })
 
+-- Code
 vim.keymap.set("n", "<leader>cw", require("wrapping").soft_wrap_mode, { desc = "Soft Wrap" })
 vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen mode toggle" })
 
+-- Harpoon
 vim.keymap.set("n", "<leader>ma", require("harpoon.mark").add_file, { desc = "Add to Harpoon" })
 vim.keymap.set("n", "<leader>mt", require("harpoon.ui").toggle_quick_menu, { desc = "Harpoon Terminal" })
 vim.keymap.set("n", "<leader>mj", function()
