@@ -18,11 +18,6 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "Super yank" })
 vim.keymap.set("v", "<leader>d", '"+d', { desc = "Super delete" })
 vim.keymap.set("v", "<leader>p", '"+p', { desc = "Super paste" })
 
-vim.keymap.set("n", "<leader>e", function()
-  require("zen-mode").toggle()
-  vim.cmd("Neotree toggle")
-end, { desc = "Toggle Neotree" })
-
 vim.keymap.set("n", "<leader>/", function()
   require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
 end, { desc = "Toggle comment line" })

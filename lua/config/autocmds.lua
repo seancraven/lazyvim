@@ -7,11 +7,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("conform").format({ bufnr = args.buf })
   end,
 })
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.py", "*.rs", "*.sql", "*.md", "*.lua" },
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = { "*.py", "*.sql", "*.md", "*.lua", "*.rs", "*.toml" },
   callback = require("zen-mode").open,
-})
-vim.api.nvim_create_autocmd({ "BufLeave" }, {
-  pattern = { "*.py", "*.rs", "*.sql", "*.md", "*.lua" },
-  callback = require("zen-mode").close,
 })
