@@ -38,7 +38,6 @@ vim.keymap.set("n", "<leader>fk", function()
 end, { desc = "Find Keymaps" })
 
 -- Code
-vim.keymap.set("n", "<leader>cw", require("wrapping").soft_wrap_mode, { desc = "Soft Wrap" })
 vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen mode toggle" })
 
 -- Harpoon
