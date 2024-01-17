@@ -57,11 +57,11 @@ return {
       })
     end,
   },
-  { "lervag/vimtex" },
+  -- { "lervag/vimtex" },
   {
     "folke/tokyonight.nvim",
     opts = {
-      transparent = true,
+      transparent = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
@@ -69,28 +69,22 @@ return {
     },
   },
 
-  {
-    "andrewferrier/wrapping.nvim",
-    config = function()
-      require("wrapping").setup()
-    end,
-  },
   { "numToStr/Comment.nvim" },
-  {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-
-          keymap = {
-            accept = "<M-l>",
-            next = "<M-j>",
-            previous = "<M-k>",
-          },
-        },
-      })
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   config = function()
+  --     require("copilot").setup({
+  --       suggestion = {
+  --
+  --         keymap = {
+  --           accept = "<M-l>",
+  --           next = "<M-j>",
+  --           previous = "<M-k>",
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
   { "ThePrimeagen/harpoon" },
   {
     "lewis6991/gitsigns.nvim",
@@ -121,7 +115,7 @@ return {
     opts = {
       twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = true }, -- disables git signs
-      tmux = { enabled = false }, -- disables the tmux statusline
+      tmux = { enabled = false },    -- disables the tmux statusline
       kitty = { enabled = true, font = "+2" },
     },
   },
