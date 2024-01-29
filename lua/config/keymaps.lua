@@ -30,12 +30,16 @@ vim.keymap.set(
   { desc = "Toggle comment for selection" }
 )
 -- Search
+local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>fw", function()
-  require("telescope.builtin").live_grep()
+  builtin.live_grep()
 end, { desc = "Find words" })
 vim.keymap.set("n", "<leader>fk", function()
-  require("telescope.builtin").keymaps()
+  builtin.keymaps()
 end, { desc = "Find Keymaps" })
+vim.keymap.set("n", "<leader>fa", function()
+  builtin.find_files({ hidden = true })
+end, { desc = "Find All Files" })
 
 -- Code
 vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen mode toggle" })
