@@ -10,6 +10,7 @@ return {
     "tpope/vim-dadbod",
     opt = true,
   },
+  { "onsails/lspkind.nvim" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -25,6 +26,7 @@ return {
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
+      local lspkind = require("lspkind")
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
@@ -32,6 +34,13 @@ return {
       cmp.setup.filetype("sql", {
         sources = cmp.config.sources({ { name = "nvim_lsp" } }, { { name = "luasnip" } }),
       })
+
+      opts.formatting = {
+        format = lspkind.cmp_format({
+          mode = 'symbol', maxwidth = 50,
+        })
+
+      }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
@@ -57,7 +66,6 @@ return {
       })
     end,
   },
-  -- { "lervag/vimtex" },
   {
     "folke/tokyonight.nvim",
     opts = {
