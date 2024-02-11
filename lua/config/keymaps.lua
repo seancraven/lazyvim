@@ -29,7 +29,6 @@ vim.keymap.set(
   "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
   { desc = "Toggle comment for selection" }
 )
--- Search
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>fw", function()
   builtin.live_grep()
@@ -60,3 +59,8 @@ vim.keymap.set("n", "<leader>ml", function()
   require("harpoon.ui").nav_file(4)
 end, { desc = "Harpoon Terminal" })
 vim.keymap.set("n", "<leader>cc", require("neogen").generate, { desc = "Generate docs template" })
+
+-- copilot
+vim.keymap.set("i", "<C-]>", require("copilot.suggestion").accept_line, { desc = "Accept copilot suggestion" })
+vim.keymap.set("i", "<C-}>", require("copilot.suggestion").next, { desc = "Next copilot suggestion" })
+vim.keymap.set("i", "<C-{", require("copilot.suggestion").prev, { desc = "Previous copilot suggestion" })

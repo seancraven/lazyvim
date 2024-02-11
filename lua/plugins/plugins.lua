@@ -78,22 +78,22 @@ return {
   },
 
   { "numToStr/Comment.nvim" },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   config = function()
-  --     require("copilot").setup({
-  --       suggestion = {
-  --
-  --         keymap = {
-  --           accept = "<M-l>",
-  --           next = "<M-j>",
-  --           previous = "<M-k>",
-  --         },
-  --       },
-  --     })
-  --   end,
-  -- },
   { "ThePrimeagen/harpoon" },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    lazy = false,
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = true, auto_trigger = true },
+      panel = { enabled = true },
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
+
   {
     "lewis6991/gitsigns.nvim",
     config = function()
