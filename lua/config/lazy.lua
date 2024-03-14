@@ -10,10 +10,10 @@ vim.g.python3_host_prog = vim.fn.expand("~/.venvs/moltennvim/bin/python3")
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim",  import = "lazyvim.plugins", opts = { colorscheme = "catppuccin" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "tokyonight" } },
     -- import any extras modules here
     -- import/override with your plugins
-    { import = "plugins", },
+    { import = "plugins" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -24,7 +24,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "catppuccin", "tokyonight", "habamax", } },
+  install = { colorscheme = { "catppuccin", "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {

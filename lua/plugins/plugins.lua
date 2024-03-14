@@ -37,9 +37,9 @@ return {
 
       opts.formatting = {
         format = lspkind.cmp_format({
-          mode = 'symbol', maxwidth = 50,
-        })
-
+          mode = "symbol",
+          maxwidth = 50,
+        }),
       }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
@@ -112,7 +112,7 @@ return {
     opts = {
       twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = true }, -- disables git signs
-      tmux = { enabled = false },    -- disables the tmux statusline
+      tmux = { enabled = false }, -- disables the tmux statusline
       kitty = { enabled = true, font = "+2" },
     },
   },
@@ -159,4 +159,8 @@ return {
       },
     },
   },
+  { "folke/tokyonight.nvim", opts = {
+    style = "storm",
+    transparent = true,
+  } },
 }
