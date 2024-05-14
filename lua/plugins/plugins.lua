@@ -43,7 +43,7 @@ return {
       }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
-        ["<Tab>"] = cmp.mapping(function(fallback)
+        ["<C-a>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.confirm({ select = true })
           elseif luasnip.expand_or_jumpable() then
@@ -112,7 +112,7 @@ return {
     opts = {
       twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = true }, -- disables git signs
-      tmux = { enabled = false }, -- disables the tmux statusline
+      tmux = { enabled = false },    -- disables the tmux statusline
       kitty = { enabled = true, font = "+2" },
     },
   },
@@ -159,8 +159,11 @@ return {
       },
     },
   },
-  { "folke/tokyonight.nvim", opts = {
-    style = "storm",
-    transparent = true,
-  } },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "storm",
+      transparent = true,
+    }
+  },
 }
