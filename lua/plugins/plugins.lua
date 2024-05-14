@@ -74,7 +74,7 @@ return {
     lazy = false,
     build = ":Copilot auth",
     opts = {
-      suggestion = { enabled = true, auto_trigger = true },
+      suggestion = { enabled = false, auto_trigger = true },
       panel = { enabled = true },
       filetypes = {
         markdown = true,
