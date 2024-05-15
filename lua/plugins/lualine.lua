@@ -15,7 +15,7 @@ end
 -- stylua: ignore
 
 local cp_opt = require("catppuccin").options.flavour
-local flavour = require("catppuccin.palettes").get_palette(cp_opt)
+local flavour = require("catppuccin.palettes").get_palette("mocha")
 local colors = {
   bg = flavour.base,
   fg = flavour.text,
@@ -94,7 +94,7 @@ ins_left({
   function()
     return "▊"
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.blue },      -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
