@@ -6,10 +6,6 @@ return {
       return {}
     end,
   },
-  {
-    "tpope/vim-dadbod",
-    opt = true,
-  },
   { "onsails/lspkind.nvim" },
   {
     "hrsh7th/nvim-cmp",
@@ -95,7 +91,7 @@ return {
     config = function()
       require("neogen").setup({
         -- Uncomment next line if you want to follow only stable versions
-        version = "*",
+        -- version = "*",
         languages = {
           python = {
             template = {
@@ -112,57 +108,35 @@ return {
     opts = {
       twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = true }, -- disables git signs
-      tmux = { enabled = false },    -- disables the tmux statusline
-      kitty = { enabled = true, font = "+2" },
+      tmux = { enabled = false }, -- disables the tmux statusline
     },
   },
   {
-    "catppuccin/nvim",
-    lazy = true,
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
+    lazy = "false",
+    priority = 1000,
     opts = {
-      transparent_background = true, -- disables setting the background color.
-      integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
+      style = "night",
+      transparent = "true",
+      styles = {
+        floats = "transparent",
+        sidebars = "transparent",
+        cursorline = "transparent",
       },
+      on_highlights = function(hl, colors)
+        hl.CursorLine = {
+          bg = "",
+        }
+        hl.CursorLineNr = {
+          fg = colors.orange,
+        }
+      end,
+      --- @param colors ColorScheme
+      on_colors = function(colors)
+        colors.comment = colors.magenta
+      end,
     },
   },
-  { "folke/tokyonight.nvim", opts = {
-    style = "storm",
-    transparent = true,
-  } },
   {
     "mrcjkb/rustaceanvim",
     version = "^3",
@@ -192,11 +166,5 @@ return {
         },
       }
     end,
-  {
-    "folke/tokyonight.nvim",
-    opts = {
-      style = "storm",
-      transparent = true,
-    }
   },
 }

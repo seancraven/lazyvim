@@ -6,7 +6,6 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
-vim.g.python3_host_prog = vim.fn.expand("~/.venvs/moltennvim/bin/python3")
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -24,7 +23,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "catppuccin", "tokyonight", "habamax" } },
+  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
