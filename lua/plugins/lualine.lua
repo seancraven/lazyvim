@@ -1,7 +1,3 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
-local lualine = require("lualine")
 local function is_recording()
   local recording_register = vim.fn.reg_recording()
   if recording_register == "" then
@@ -14,7 +10,6 @@ end
 -- Color table for highlights
 -- stylua: ignore
 
-local cp_opt = require("catppuccin").options.flavour
 local flavour = require("catppuccin.palettes").get_palette("mocha")
 local colors = {
   bg = flavour.base,
@@ -94,7 +89,7 @@ ins_left({
   function()
     return "▊"
   end,
-  color = { fg = colors.blue },      -- Sets highlighting of component
+  color = { fg = colors.blue }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
