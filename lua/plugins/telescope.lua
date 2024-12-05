@@ -7,7 +7,7 @@ return {
     "nvim-telescope/telescope.nvim",
     opts = {
       file_ignore_patterns=ignore_filetypes_list
-    }
+    },
     keys = {
       -- disable the keymap to grep files
       { "<leader>/", false },
