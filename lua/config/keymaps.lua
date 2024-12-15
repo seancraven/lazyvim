@@ -22,9 +22,6 @@ vim.keymap.set("n", "<leader>/", function()
   require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
 end, { desc = "Toggle comment line" })
 
--- Code
-vim.keymap.set("n", "<leader>cz", require("zen-mode").toggle, { desc = "Zen mode toggle" })
-
 -- copilot
 vim.keymap.set("i", "<C-]>", require("copilot.suggestion").accept_line, { desc = "Accept copilot suggestion" })
 vim.keymap.set("i", "<C-}>", require("copilot.suggestion").next, { desc = "Next copilot suggestion" })
